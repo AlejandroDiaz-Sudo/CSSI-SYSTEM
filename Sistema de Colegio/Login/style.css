@@ -1,0 +1,139 @@
+body {
+  background: rgb(5, 5, 5);
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  background-image: url(https://i0.wp.com/hipertextual.com/wp-content/uploads/2013/11/Wallpaper-Monta%C3%B1as.jpg?fit=1200%2C800&ssl=1);
+  background-repeat: no-repeat;
+  background-size:80%
+  
+  
+}
+
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color:white;
+}
+
+.main-div, .loggedin-div {
+  width: 13%;
+  margin-top: 15px;
+  padding: 20px;
+  display: none;
+  margin-left: 1600px;
+  color:white;
+  
+}
+
+.main-div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  color:white;
+  
+}
+
+.main-div input:focus {
+  border: 1px solid #777;
+  
+}
+
+.main-div button, .loggedin-div button {
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div button:hover, .loggedin-div button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+}
+
+.loginlogo{
+
+  text-align:center;
+}
+
+#colect{
+
+  color:black;
+}
+
+.options{
+
+  margin-bottom: 2px;
+}
+
+
+.addproducts{
+
+background-color:#223764;
+text-align: center;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+border-radius: 3px;
+border-left: 25px;
+border-width: 15px;
+
+
+
+}
+
+.nav-wrapper{
+
+  background-color:rgb(34, 20, 20);
+}
+
+
+#logoempresa1{
+
+  margin-top: 5px;
+  width:3%;
+  margin-right: 0px;  
+  border-radius: 35%;
+
+
+}
+
+
+#logoempresa2{
+
+margin-top: 0px;
+margin-bottom: -600px;
+margin-left: 550px;
+margin-top: 250px;
+width: 20%;
+background-color:black;
+opacity: 0.7;
+border-radius: 35%;
+
+
+
+
+
+
+
+}
+
+.btns{
+
+  background-color:red;
+}

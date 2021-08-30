@@ -1,0 +1,208 @@
+<html>
+<head>
+  <title>Colegio CSSI</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+
+    <link rel="stylesheet" href="style.css" />
+  
+    <link rel="stylesheet" href="/style.css" />
+  
+</head>
+
+
+<header>
+
+  
+
+</header>
+
+
+
+
+
+
+<body>
+  
+  <nav class="navig">
+    
+    
+    <div class="nav-wrapper">
+      
+      <img src="logo1.png"id="logoempresa1">  
+      <img src="logo1.png"id="logoempresa2">
+      
+      <a href="/logo1.png" class="brand-logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">About</a></li>
+        <li><a href="collapsible.html">Register</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+
+    
+  
+  
+    <!-- cuerpo -->
+  <div id="login_div" class="main-div">
+    <h3 style="color:white;text-align: center;">Login</h3>
+    <div class="loginlogo">
+    <i class="large material-icons">account_circle</i>
+    <br>
+    <br>
+    <br>
+    </div>
+    <i class="material-icons">email</i>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <i class="material-icons">no_encryption</i>
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+    <br>
+    
+    <button onclick="googleSignIn()">Login con Google </button>
+    
+    <h6>si usas tu cuenta de google no te preocupes por registrarte , conoce más sobre Oauth.</h6>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Bienvenido</h3>
+    <p style="color:white;" id="user_para">Welcome.</p>
+
+
+    <Div class="brd">
+    <div class="addproducts">
+      
+    <a href="/Modulo de Ingreso de Alumnos/RegistroAlumno.html">Agregar Alumno</a>
+    
+    
+    </div>
+    
+  </Div>
+    
+<br>
+
+  <Div class="brd">
+    <div class="addproducts">
+      
+    
+      <a href="/Modulo Agregar Cursos/cursos.html">Agregar Curso </a>  
+    
+    </div>
+    
+  </Div>
+<br>
+<Div class="brd">
+  <div class="addproducts">
+    
+  <a href="/Modulo Ingreso de Maestros/maestros.html">Agregar Maestro</a>
+  
+  
+  </div>
+  
+</Div>
+
+
+
+
+  
+
+<br>
+<br>
+
+
+
+
+<!--    <ul class="collection with-header" id="colect">
+      <div class="options">
+      <li class="collection-item"><div>Control Usuarios<a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a></div></li>
+      </div>
+      <div class="options">
+      <li class="collection-item"><div>Productos<a href="#!" class="secondary-content"><i class="material-icons">add</i></a></div></li>
+      </div>
+      <div class="options">
+      <li class="collection-item"><div>Administración<a href="#!" class="secondary-content"><i class="material-icons">adb</i></a></div></li>
+      </div>
+      <li class="collection-item"><div>Inventario<a href="#!" class="secondary-content"><i class="material-icons">book</i></a></div></li>
+    </ul>
+  -->
+  
+  
+    <button onclick="logout()">Logout</button>
+  </div>
+<!--JavaScript CDNŚ-->
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCxT92EjR5ICIn5sXhOUUQxg2dCJEB76Zk",
+    authDomain: "loginexample-7de26.firebaseapp.com",
+    projectId: "loginexample-7de26",
+    storageBucket: "loginexample-7de26.appspot.com",
+    messagingSenderId: "1081597210391",
+    appId: "1:1081597210391:web:88d822fbf9b22fbafed152"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  googleSignIn=()=>{
+
+base_provinder= new firebase.auth.GoogleAuthProvider()
+firebase.auth().signInWithPopup(base_provinder).then(function(result){
+
+    alert("Inicio con Google")
+    console.log(result)
+
+}).catch(function(err){
+
+    console.log(err)
+    console.log("not sucess")
+})
+
+}
+
+
+
+</script>
+
+  
+  <script src="index.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

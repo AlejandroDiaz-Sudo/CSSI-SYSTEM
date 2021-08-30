@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Agregar Maestro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" integrity="sha384-L7+YG8QLqGvxQGffJ6utDKFwmGwtLcCjtwvonVZR/Ba2VzhpMwBz51GaXnUsuYbj" crossorigin="anonymous">
+    
+
+
+</head>
+<body>
+    
+    
+
+<h1 class="titulo" style="text-align: center;">Registro de Maestros</h1>
+
+<div class="conteiner-sm">
+    <div class="row">
+        <div class="col-md-4 offset-4">
+            <div class="card">
+                <div class="card-body">
+                    <form id="task-form">
+                        <div class="form-group">
+                            <label for="task-title">Codigo Maestro</label>
+                            <input type="text" id="task-codigom" class="form-control" placeholder="Codigo Maestro"autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-email">Nombre del Maestro</label>
+                            <input type="text" id="task-nombremaestro" class="form-control" placeholder="Nombre del Maestro">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-description">Curso que Imparte</label>
+                            <input type="text" id="task-maestrocursos" class="form-control" placeholder="Curso que Imparte" >
+                        </div>
+
+                        
+                        <div class="panelbutton">
+                        <button class="btn-primary" id="btn-task-form">Guardar</button>
+                        
+                        
+
+
+
+                        </div>
+                    </form>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+
+    
+
+<script>
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDO-Q-Ty5OBs2xv4ZUR1-QnkuJy7s3ZZIw",
+  authDomain: "crud-24fc3.firebaseapp.com",
+  databaseURL: "https://crud-24fc3-default-rtdb.firebaseio.com",
+  projectId: "crud-24fc3",
+  storageBucket: "crud-24fc3.appspot.com",
+  messagingSenderId: "634541294172",
+  appId: "1:634541294172:web:037438442d8833506adc99"
+  };
+
+
+  // Initialize Firebase
+  
+  firebase.initializeApp(firebaseConfig);
+  
+  firebase.firestore().settings({ experimentalForceLongPolling: true }); 
+  
+</script>
+
+
+
+
+<script>
+
+
+
+const db = firebase.firestore();
+
+const taskform = document.getElementById("task-form");
+
+
+taskform.addEventListener('submit',async(e) =>{
+e.preventDefault();
+
+const codigom = taskform['task-codigom'].value;
+const nombremaestro = taskform['task-nombremaestro'].value;
+const maestrocursos = taskform['task-maestrocursos'].value;
+
+
+await db.collection('maestros').doc().set({
+
+codigom,
+nombremaestro,
+maestrocursos
+
+
+})
+
+
+
+
+});
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
